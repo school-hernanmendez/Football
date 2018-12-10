@@ -47,7 +47,7 @@ class Signup extends Component {
 function signup(object, push) {
   return dispatch => {
     if(object.username && object.firstname && object.lastname) {
-    axios.get(`${location.href}api/signup/${object.username}/${object.firstname}/${object.lastname}`)
+    axios.get(`${window.location.href}api/signup/${object.username}/${object.firstname}/${object.lastname}`)
       .then(response => {
         push('/measurements')
         dispatch({
