@@ -40,7 +40,7 @@ class Intro extends Component {
 
 function login(username, push) {
   return dispatch => {
-    axios.get(`${window.location.href}api/login/${username}`)
+    axios.get(`${window.location.origin}/api/login/${username}`)
       .then(response => {
         push('/workouts')
         dispatch({
