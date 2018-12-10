@@ -46,6 +46,7 @@ class Signup extends Component {
 
 function signup(object, push) {
   return dispatch => {
+    if(object.username && object.firstname && object.lastname) {
     axios.get(`http://localhost:8080/api/signup/${object.username}/${object.firstname}/${object.lastname}`)
       .then(response => {
         push('/measurements')
@@ -72,6 +73,12 @@ function signup(object, push) {
           })
         }
       })
+    } else {
+      dispatch({
+        type: 'fail',
+        payload: 'All fields have to be filled'
+      })
+    }
   }
 }
 
