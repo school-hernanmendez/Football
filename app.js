@@ -45,6 +45,16 @@ function getDay() {
   }
 }
 
+app.get('*', (req, res) => {
+  if(/\/(api|logo)/.test(req.url)) {
+    next();
+  } else if(req.url === '/') {
+    res.sendFile(`${__dirname}/build/index.html`);
+  } else {
+    res.redirect('/')
+  }
+})
+
 app.get('/api/login/:username', (req, res) => {
   User.findOne({ username: req.params.username }).lean().exec()
   .then(user => {
@@ -80,10 +90,6 @@ app.get('/api/signup/:username/:firstname/:lastname', (req, res) => {
 
 app.get('/logo.svg', (req, res) => {
   res.sendFile(`${__dirname}/build/logo.svg`);
-});
-
-app.get('/', (req, res) => {
-  res.sendFile(`${__dirname}/build/index.html`);
 });
 
 app.listen(port, () => {
