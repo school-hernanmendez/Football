@@ -8,6 +8,7 @@ import { Provider } from 'react-redux'
 
 import Intro from './pages/intro'
 import Signup from './pages/signup'
+import SelectQ from './pages/selectQ'
 
 const initialState = {
   _id: '',
@@ -16,6 +17,7 @@ const initialState = {
   lastname: '',
   message: '',
   day: '',
+  quarter: 0,
   measures: {}
 }
 
@@ -24,10 +26,12 @@ function reducer(state = initialState, action) {
   switch(action.type) {
     case 'login':
       action.payload.message = ''
+      action.payload.quarter = 0
       console.log(action.payload)
       return action.payload
     case 'signup':
       action.payload.message = ''
+      action.payload.quarter = 0
       return action.payload
     case 'change_thing':
       newState.measures[action.payload.measurement] = action.payload.new
@@ -35,6 +39,8 @@ function reducer(state = initialState, action) {
     case 'fail':
       newState.message = action.payload
       return newState
+    case 'qt':
+      newState.quarter = action.payload
     default:
       return state;
   }
@@ -49,6 +55,7 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route path="/signup" component={Signup} />
+            <Route path="/selectQ" component={SelectQ} />
             <Route path="/" component={Intro} />
           </Switch>
         </BrowserRouter>

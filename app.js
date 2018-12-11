@@ -78,6 +78,10 @@ app.get('/api/signup/:username/:firstname/:lastname', (req, res) => {
     }).catch(res.catchError('mongo error'))
   });
 
+app.get('/logo.svg', (req, res) => {
+  res.sendFile(`${__dirname}/build/logo.svg`);
+});
+
 app.get('/', (req, res) => {
   res.sendFile(`${__dirname}/build/index.html`);
 });

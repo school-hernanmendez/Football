@@ -24,7 +24,7 @@ class Intro extends Component {
 
   render() {
     return (
-      <div className="wrap intro">
+      <div className="wrap page">
         <img className="logo-main" src="https://carefair.herokuapp.com/static/CHS.png" alt="chs-logo" />
         <div>
           <p>Username</p>
@@ -42,7 +42,7 @@ function login(username, push) {
   return dispatch => {
     axios.get(`${window.location.origin}/api/login/${username}`)
       .then(response => {
-        push('/workouts')
+        push('/selectQ')
         dispatch({
           type: 'login',
           payload: response.data
