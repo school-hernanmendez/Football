@@ -9,6 +9,7 @@ import { Provider } from 'react-redux'
 import Intro from './pages/intro'
 import Signup from './pages/signup'
 import SelectQ from './pages/selectQ'
+import Workout from './pages/exercise'
 
 const initialState = {
   _id: '',
@@ -56,6 +57,7 @@ class App extends Component {
           <Switch>
             <Route path="/signup" component={Signup} />
             <Route path="/selectQ" component={SelectQ} />
+            <Route path="/workouts" component={Workout} />
             <Route path="/" component={Intro} />
           </Switch>
         </BrowserRouter>
