@@ -45,11 +45,11 @@ function getDay() {
   }
 }
 
-app.get('*', (req, res) => {
+app.use('*', (req, res) => {
   if(/\/(api|logo)/.test(req.url)) {
     next();
   } else if(req.url === '/') {
-    res.sendFile(`${__dirname}/build/index.html`);
+    next();
   } else {
     res.redirect('/')
   }
