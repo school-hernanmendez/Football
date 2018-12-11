@@ -5,6 +5,8 @@ import Navbar from './navbar'
 
 class Quarter extends Component {
   constructor() {
+    super()
+    this.state = {}
     this.select = this.select.bind(this)
   }
   select(n) {
