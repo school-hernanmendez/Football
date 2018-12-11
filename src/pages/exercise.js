@@ -40,7 +40,7 @@ class Workout extends Component {
 function quarterChange(c) {
   return dispatch => {
     dispatch({
-      type: qt,
+      type: 'qt',
       payload: c+1
     })
   }
