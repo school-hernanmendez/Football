@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import { API_URL } from '../var'
 
 class Intro extends Component {
   constructor() {
@@ -40,7 +41,7 @@ class Intro extends Component {
 
 function login(username, push) {
   return dispatch => {
-    axios.get(`${window.location.origin}/api/login/${username}`)
+    axios.get(`${API_URL}/api/login/${username}`)
       .then(response => {
         push('/workouts')
         dispatch({

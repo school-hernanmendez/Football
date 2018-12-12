@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import { API_URL } from '../var'
 
 class Signup extends Component {
   constructor() {
@@ -47,7 +48,7 @@ class Signup extends Component {
 function signup(object, push) {
   return dispatch => {
     if(object.username && object.firstname && object.lastname) {
-    axios.get(`${window.location.origin}/api/signup/${object.username}/${object.firstname}/${object.lastname}`)
+    axios.get(`${API_URL}/api/signup/${object.username}/${object.firstname}/${object.lastname}`)
       .then(response => {
         push('/measurements')
         dispatch({
