@@ -10,9 +10,10 @@ body {
 
 .navbar {
   height: 10vh;
+  display: flex;
 }
 
-.intro {
+.page {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -49,4 +50,18 @@ body {
 
 .login {
   width: 100%;
+}
+
+.quarter {
+  height: 15vh;
+  border: 0;
+  border-top: 1px solid black;
+}
+
+.quarter:active {
+  background-color: rgba(0,0,0,.4);
+}
+
+.sm-logo {
+  height: 10vh;
 }

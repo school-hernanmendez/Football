@@ -27,7 +27,7 @@ class Signup extends Component {
 
   render() {
     return (
-      <div className="wrap intro">
+      <div className="wrap page">
         <img className="logo-main" src="https://carefair.herokuapp.com/static/CHS.png" alt="chs-logo" />
         <div>
           <p>Username</p>

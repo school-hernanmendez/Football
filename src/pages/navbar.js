@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 export default class Navbar extends Component {
   render() {
     return (
-      <div></div>
+      <div classname="navbar">
+        <img src={`${window.location.origin}/logo.svg`} alt="logo" classname="sm-logo" />
+      </div>
     )
   }
 }
