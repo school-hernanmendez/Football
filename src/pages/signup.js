@@ -28,7 +28,7 @@ class Signup extends Component {
   render() {
     return (
       <div className="wrap page">
-        <img className="logo-main-sm" src="https://carefair.herokuapp.com/static/CHS.png" alt="chs-logo" />
+        <img className="logo-main-sm" src="/logo.svg" alt="chs-logo" />
         <div>
           <p className="bigger">Username</p>
           <input className="input main" onChange={e => this.change(e.target.value, 'username')} value={this.state.username}/>
