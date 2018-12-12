@@ -50,11 +50,6 @@ body {
   width: 70vw;
 }
 
-.full {
-  width: 100%;
-  margin-bottom: 6px;
-}
-
 .quarter {
   height: 15vh;
   border: 0;
@@ -69,13 +64,30 @@ body {
   height: 10vh;
 }
 
+.full-btn {
+  width: 100%;
+  margin-bottom: 6px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.6);
+}
+
+.full-btn:active {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
+}
+
 .fill-btn {
   color: white;
   box-sizing: border-box;
   background-color: #9030CE;
   border-radius: 0;
   border: 2px solid #9030CE;
-  font-weight: bold;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.fill-btn:active {
+  border-color: rgb(120, 60, 160);
+  background-color: rgb(120, 60, 160);
+  color: rgb(194, 194, 194);
 }
 
 .empty-btn {
@@ -84,5 +96,12 @@ body {
   background-color: white;
   border-radius: 0;
   border: 2px solid #9030CE;
-  font-weight: bold;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.empty-btn:active {
+  border-color: rgb(120, 60, 160);
+  background-color: rgb(194, 194, 194);
+  color: rgb(120, 60, 160);
 }
