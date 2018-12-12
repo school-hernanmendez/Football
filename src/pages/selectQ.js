@@ -31,7 +31,7 @@ class Quarter extends Component {
       return (
         <div className="wrap page">
           <Navbar />
-          <p>Today is: {this.props.day}</p>
+          <p className="bigger">Today is: {this.props.day}</p>
           <button className="quarter" onClick={() => this.select(1)}>1</button>
           <button className="quarter" onClick={() => this.select(2)}>2</button>
           <button className="quarter" onClick={() => this.select(3)}>3</button>
