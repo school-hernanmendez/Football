@@ -85,9 +85,9 @@ body {
 }
 
 .fill-btn:active {
-  border-color: rgb(120, 60, 160);
-  background-color: rgb(120, 60, 160);
-  color: rgb(194, 194, 194);
+  border-color: rgb(126, 56, 173);
+  background-color: rgb(126, 56, 173);
+  color: rgb(223, 223, 223)
 }
 
 .empty-btn {
@@ -101,7 +101,7 @@ body {
 }
 
 .empty-btn:active {
-  border-color: rgb(120, 60, 160);
-  background-color: rgb(194, 194, 194);
-  color: rgb(120, 60, 160);
+  border-color: rgb(126, 56, 173);
+  background-color: rgb(223, 223, 223);
+  color: rgb(126, 56, 173);
 }
