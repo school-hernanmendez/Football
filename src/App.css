@@ -67,11 +67,11 @@ body {
 .full-btn {
   width: 100%;
   margin-bottom: 6px;
-  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.025);
 }
 
 .full-btn:active {
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 0 0 white;
 }
 
 .fill-btn {
