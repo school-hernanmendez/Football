@@ -33,6 +33,12 @@ body {
   width: 40vw;
 }
 
+.logo-main-sm {
+  height: 22vw;
+  width: 30vw;
+}
+
+
 .input {
   border-width: 0;
   background-color: rgba(0,0,0,0);
@@ -68,11 +74,6 @@ body {
 .full-btn {
   width: 100%;
   margin-bottom: 10px;
-  box-shadow: 0 0 30px -10px rgb(0, 0, 0);
-}
-
-.full-btn:active {
-  box-shadow: 0 0 0 0 white;
 }
 
 .fill-btn {
@@ -109,4 +110,5 @@ body {
 
 .bigger {
   font-size: 20px;
+  margin-bottom: 10px;
 }

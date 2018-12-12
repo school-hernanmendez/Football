@@ -28,17 +28,17 @@ class Signup extends Component {
   render() {
     return (
       <div className="wrap page">
-        <img className="logo-main" src="https://carefair.herokuapp.com/static/CHS.png" alt="chs-logo" />
+        <img className="logo-main-sm" src="https://carefair.herokuapp.com/static/CHS.png" alt="chs-logo" />
         <div>
-          <p>Username</p>
+          <p className="bigger">Username</p>
           <input className="input main" onChange={e => this.change(e.target.value, 'username')} value={this.state.username}/>
-          <p>First name</p>
+          <p className="bigger">First name</p>
           <input className="input main" onChange={e => this.change(e.target.value, 'firstname')} value={this.state.firstname}/>
-          <p>Last name</p>
+          <p className="bigger">Last name</p>
           <input className="input main" onChange={e => this.change(e.target.value, 'lastname')} value={this.state.lastname}/>
           <p>{this.props.message} </p>
-          <button onClick={() => this.signup()}>Sign up</button>
-          <Link to="/"><button>Back to Log in</button></Link>
+          <button onClick={() => this.signup()} className="full-btn fill-btn">Sign up</button>
+          <Link to="/"><button className="full-btn empty-btn">Back to Log in</button></Link>
         </div>
       </div>
     )
