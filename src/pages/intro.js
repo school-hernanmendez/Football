@@ -31,8 +31,8 @@ class Intro extends Component {
           <p>Username</p>
           <input className="input main" onChange={e => this.change(e.target.value)} value={this.state.username}/>
           <p>{this.props.message}</p>
-          <button className="full fill-btn" onClick={this.login}>Log in</button>
-          <Link to="/signup"><button className="full empty-btn">Sign up</button></Link>
+          <button className="full-btn fill-btn" onClick={this.login}>Log in</button>
+          <Link to="/signup"><button className="full-btn empty-btn">Sign up</button></Link>
         </div>
       </div>
     )
