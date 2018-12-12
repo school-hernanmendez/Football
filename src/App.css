@@ -49,7 +49,7 @@ body {
   width: 70vw;
 }
 
-.login {
+.full {
   width: 100%;
 }
 
@@ -65,4 +65,20 @@ body {
 
 .sm-logo {
   height: 10vh;
+}
+
+.fill-btn {
+  color: white;
+  box-sizing: border-box;
+  background-color: #9030CE;
+  border-radius: 0;
+  border: 3px solid #9030CE;
+}
+
+.empty-btn {
+  color: #9030CE;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 0;
+  border: 3px solid #9030CE;
 }
