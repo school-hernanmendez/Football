@@ -28,7 +28,7 @@ class Intro extends Component {
       <div className="wrap page">
         <img className="logo-main" src="https://carefair.herokuapp.com/static/CHS.png" alt="chs-logo" />
         <div>
-          <p classname="bigger">Username</p>
+          <p className="bigger">Username</p>
           <input className="input main" onChange={e => this.change(e.target.value)} value={this.state.username}/>
           <p>{this.props.message}</p>
           <button className="full-btn fill-btn" onClick={this.login}>Log in</button>

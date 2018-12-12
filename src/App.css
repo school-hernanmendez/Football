@@ -54,6 +54,7 @@ body {
 }
 
 .input.main {
+  font-size: 16px;
   width: 70vw;
 }
 
@@ -83,7 +84,7 @@ body {
   border-radius: 0;
   border: 2px solid #9030CE;
   font-weight: 500;
-  padding: 4px;
+  padding: 6px;
 }
 
 .fill-btn:active {
@@ -99,7 +100,7 @@ body {
   border-radius: 0;
   border: 2px solid #9030CE;
   font-weight: 500;
-  padding: 4px;
+  padding: 6px;
 }
 
 .empty-btn:active {
@@ -109,6 +110,6 @@ body {
 }
 
 .bigger {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 17px;
+  margin-bottom: 8px;
 }
