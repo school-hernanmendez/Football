@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import Navbar from './navbar'
+
 class Workout extends Component {
   constructor() {
     super()
@@ -25,6 +27,7 @@ class Workout extends Component {
   render() {
     return (
       <div classname="wrap page">
+        <Navbar />
         <div classname="timer"></div>
         {
           this.workouts[this.props.day].map(i => {

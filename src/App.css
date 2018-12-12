@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgba(0,0,0, 0.2)
+  background-color: white;
 }
 
 .wrap {
@@ -11,6 +11,7 @@ body {
 .navbar {
   height: 10vh;
   display: flex;
+  background-color: #9030CE;
 }
 
 .page {
