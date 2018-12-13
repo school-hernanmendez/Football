@@ -12,6 +12,23 @@ class Measures extends Component {
             workouts: props.workouts
         }
     }
+
+    changeHeight() {
+
+    }
+
+    changeWeight() {
+
+    }
+
+    changeWorkout() {
+        
+    }
+
+    submit() {
+
+    }
+    
     render() {
         return (
             <div class="wrap page">
@@ -29,6 +46,7 @@ class Measures extends Component {
                         )
                     })
                 }
+                <button>Done</button>
             </div>
         )
     }
