@@ -78,7 +78,7 @@ app.get('/api/signup/:username/:firstname/:lastname', (req, res) => {
     if(user) {
       res.status(409).send('User already exists')
     } else {
-      const newUser = User({ username, firstname, lastname, workouts});
+      const newUser = User({ username, firstname, lastname, workouts, weight: 0, height:{ feet: 0, inches: 0 }});
       newUser.save()
       .then(doc => {
         doc.day = getDay()
