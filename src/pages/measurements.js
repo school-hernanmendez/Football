@@ -40,7 +40,7 @@ class Measures extends Component {
                     }).map(i => {
                         return (
                             <div>
-                                <p>{key.replace(/\_/g, ' ').replace(/^(.)|\s(.)/g, ($1) => $1.toUpperCase())}</p>
+                                <p>{i.replace(/\_/g, ' ').replace(/^(.)|\s(.)/g, ($1) => $1.toUpperCase())}</p>
                                 <input type="input" value={this.state.value}/>
                             </div>
                         )
