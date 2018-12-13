@@ -35,6 +35,8 @@ var exercises = [
 var workouts = {}
 
 for (let i=0; exercises.length > i; i++) {
+    console.log(exercises, i)
+    console.log(exercises[i])
     workouts[exercises[i][0]] = {
         num: 0,
         type: exercises[i][1]
