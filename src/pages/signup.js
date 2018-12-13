@@ -50,11 +50,11 @@ function signup(object, push) {
     if(object.username && object.firstname && object.lastname) {
     axios.get(`${API_URL}/api/signup/${object.username}/${object.firstname}/${object.lastname}`)
       .then(response => {
-        push('/measurements')
         dispatch({
           type: 'signup',
           payload: response.data
         })
+        push('/measurements')
       })
       .catch(err => {
         if(err.request.status === 409) {

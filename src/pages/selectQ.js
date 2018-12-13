@@ -52,11 +52,11 @@ class Quarter extends Component {
 
 function selectQuarter(n, push) {
   return dispatch => {
-    push('/workouts')
     dispatch({
       type: 'qt',
       payload: n
     })
+    push('/workouts')
   }
 }
 

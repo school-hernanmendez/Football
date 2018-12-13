@@ -1,8 +1,9 @@
 const cors = require('cors')
 const express = require('express')
 const app = express()
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser')
 const User = require('./mongoose.js')
+const workouts = require('./workouts')
 app.use(bodyParser.json());
 
 const port = process.env.PORT || 8080;
@@ -77,7 +78,7 @@ app.get('/api/signup/:username/:firstname/:lastname', (req, res) => {
     if(user) {
       res.status(409).send('User already exists')
     } else {
-      const newUser = User({ username, firstname, lastname });
+      const newUser = User({ username, firstname, lastname, workouts});
       newUser.save()
       .then(doc => {
         doc.day = getDay()
