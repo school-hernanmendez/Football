@@ -10,6 +10,7 @@ import Intro from './pages/intro'
 import Signup from './pages/signup'
 import SelectQ from './pages/selectQ'
 import Workout from './pages/exercise'
+import Measures from './pages/measurements'
 
 const initialState = {
   _id: '',
@@ -58,6 +59,7 @@ class App extends Component {
             <Route path="/signup" component={Signup} />
             <Route path="/selectQ" component={SelectQ} />
             <Route path="/workouts" component={Workout} />
+            <Route path="/measurements" component={Measures} />
             <Route path="/" component={Intro} />
           </Switch>
         </BrowserRouter>
