@@ -22,7 +22,7 @@ class Measures extends Component {
     }
 
     changeWorkout() {
-        
+
     }
 
     submit() {
@@ -52,4 +52,6 @@ class Measures extends Component {
     }
 }
 
-export default connect(state => state, { editW, editH, editW })(Measures)
+function submit() {}
+
+export default connect(state => state)(Measures)
