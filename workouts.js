@@ -10,7 +10,7 @@ var exercises = [
     ['jump_rope', 'no'],
     ['knee_2_elbow', 'no'],
     ['superman','no'],
-    ['post_workout_stretch'],
+    ['post_workout_stretch', 'no'],
     ['clean_&_jerk', 'no'],
     ['bar_thrusters', 'no'],
     ['pull_up', 'n'],

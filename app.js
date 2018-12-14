@@ -94,6 +94,15 @@ app.get('/logo.svg', (req, res) => {
   res.sendFile(`${__dirname}/build/logo.svg`);
 });
 
+app.post('/api/change/:id', (req, res) => {
+  User.findByIdAndUpdate(req.params.id, req.body, {new: true}).lean().exec()
+  .then(doc => {
+    doc.day = getDay()
+    res.json(doc)
+  })
+  .catch(res.catchError('mongo error'))
+})
+
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
 });

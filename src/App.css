@@ -4,26 +4,74 @@ body {
   background-color: white;
   font-family: 'Open Sans', sans-serif;
   font-size: 17px;
+  overflow: hidden;
+}
+
+.eighty {
+  width: 80vw;
+}
+
+.ninety {
+  width: 90vw;
 }
 
 .wrap {
   height: 100vh;
+  box-sizing: border-box;
+}
+
+.navbar-wrapper {
+  width: 100vw;
+  background-color: #9030CE;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.withnav {
+  padding-top: 75px;
 }
 
 .navbar {
-  height: 13vh;
+  position: relative;
+  left: -5vw;
+  height: 60px;
+  width: 90vw;
   display: flex;
+  align-items: center;
+  padding-left: 10vw;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #9030CE;
-  box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+}
+
+.navbar > .measures {
+  height: 36px;
+  border-radius: 0;
+  color: #9030CE;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid white;
+  font-weight: 500;
+  padding: 6px;
+  font-size: 15px;
+}
+
+.navbar.f-c {
+  justify-content: space-around;
+}
+
+.navbar > .text {
+  color: white;
+  font-size: 18px;
 }
 
 .page {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;   
+  align-items: center;
 }
 
 .buttonBottom {
@@ -50,6 +98,7 @@ body {
 
 .input:focus {
   outline-width: 0;
+  border-color: #9030CE;
 }
 
 .text-center {
@@ -60,19 +109,32 @@ body {
   width: 70vw;
 }
 
+.quarter-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-top: 15px;
+}
+
 .quarter {
-  height: 15vh;
+  flex: 1;
   border: 0;
-  border-top: 1px solid black;
   width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 4vh;
+  color: #9030CE;
+  background-color: white;
+  border-radius: 0;
+  border: 3px solid #9030CE;
+  font-weight: 500;
+  font-size: 20px;
+  transition: background-color .3s;
+  transform: scaleY(.9)
 }
 
 .quarter:active {
-  background-color: rgba(0,0,0,.4);
-}
-
-.sm-logo {
-  height: 10vh;
+  background-color: rgb(168, 96, 216);
 }
 
 .full-btn {
@@ -119,8 +181,94 @@ body {
   width: 100%;
 }
 
+.bigger-j {
+  font-size: 17px;
+  margin: 0;
+  text-align: left;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
 .workout-input {
   width: 80vw;
   display: flex;
   flex-direction: row;
+  margin-bottom: 8px;
+}
+
+span.workout {
+  flex: 1;
+}
+
+.input.workout {
+  width: 50px;
+}
+
+.done {
+  bottom: 0;
+  box-shadow: 0 -1px 5px 0 rgba(0,0,0,.4);
+  width: 100vw;
+  height: 40px;
+  color: #9030CE;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 0;
+  border-width: 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.workouts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 16px;
+}
+
+.height {
+  width: 80vw;
+}
+
+.height > p {
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+.height > div {
+  display: flex;
+}
+
+.height > div > div {
+  flex: 1;
+  display: flex;
+}
+
+.height > div > div > span {
+  flex: 1;
+}
+
+.height > div > div > input {
+  flex: 1;
+  width: 40px;
+}
+.height > div > div > input.one {
+  margin-right: 20px;
+}
+
+.weight {
+  width: 80vw;
+}
+
+.weight > p {
+  font-size: 18px;
+  margin-bottom: -2px;
+}
+
+.weight > input {
+  width: 100%;
 }

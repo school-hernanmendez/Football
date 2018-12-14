@@ -29,20 +29,21 @@ function reducer(state = initialState, action) {
     case 'login':
       action.payload.message = ''
       action.payload.quarter = 0
-      console.log(action.payload)
       return action.payload
     case 'signup':
       action.payload.message = ''
       action.payload.quarter = 0
       return action.payload
-    case 'change_thing':
-      newState.measures[action.payload.measurement] = action.payload.new
-      return newState
+    case 'change':
+      action.payload.message = ''
+      action.payload.quarter = 0
+      return action.payload
     case 'fail':
       newState.message = action.payload
       return newState
     case 'qt':
       newState.quarter = action.payload
+      return newState
     default:
       return state;
   }

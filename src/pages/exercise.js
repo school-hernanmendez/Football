@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import Navbar from './navbar'
 
-class Workout extends Component {
+class Timer extends Component {
   constructor() {
     super()
     this.state = {
@@ -11,12 +11,9 @@ class Workout extends Component {
       runningTimer: 12*60,
       running: false
     }
-    this.workouts = {
-      Tuesday: [1,2,3,4]
-    }
   }
   startTimer() {
-
+    
   }
   resetTimer() {
 
@@ -25,10 +22,53 @@ class Workout extends Component {
 
   }
   render() {
+    if(this.state.running) {
+      return (
+        <div></div>
+      )
+    }
+    return (
+      <div></div>
+    )
+  }
+}
+
+class Workout extends Component {
+  constructor() {
+    super()
+    this.state = {}
+    this.workouts = {
+      Monday: [
+        [],
+        [],
+        [],
+        []
+      ],
+      Tuesday: [
+        [],
+        [],
+        [],
+        []
+      ],
+      Wednesday: [
+        [],
+        [],
+        [],
+        []
+      ],
+      Thursday: [
+        [],
+        [],
+        [],
+        []
+      ],
+    }
+  }
+  render() {
     return (
       <div classname="wrap page">
         <Navbar />
-        <div classname="timer"></div>
+        <Timer />
         {
           this.workouts[this.props.day].map(i => {
             return <div>{i}</div>
