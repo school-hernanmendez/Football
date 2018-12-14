@@ -40,7 +40,7 @@ class Measures extends Component {
   }
 
   submit() {
-    this.props.submit(this.props._id, this.state, this.props.history.goBack)
+    this.props.submit(this.props._id, this.state, this.props.history.push)
   }
   
   render() {
@@ -107,7 +107,7 @@ class Measures extends Component {
   }
 }
 
-function submit(id, object, back) {
+function submit(id, object, push) {
   return dispatch => {
     axios.post(`${API_URL}/api/change/${id}`, object)
       .then(response => {
@@ -115,7 +115,7 @@ function submit(id, object, back) {
           type: 'change',
           payload: response.data
         })
-        back();
+        push('/selectQ');
       })
       .catch(err => {
         dispatch({

@@ -16,7 +16,7 @@ class Quarter extends Component {
     var workoutDay = true;
     switch (this.props.day) {
       case 'Friday':
-        workoutDay = true;
+        workoutDay = false;
         break
       case 'Saturday':
         workoutDay = false;
@@ -43,10 +43,12 @@ class Quarter extends Component {
       )
     }
     return (
-      <div className="wrap page">
+      <div className="wrap page withnav">
         <Navbar push={this.props.history.push} />
+        <div>
         <p className="bigger-j eighty">Today is: {this.props.day}</p>
         <p className="bigger-j eighty">You shouldn't be in football class today but you can still choose a custom workout</p>
+        </div>
       </div>
     )
   }
