@@ -45,8 +45,8 @@ class Quarter extends Component {
     return (
       <div className="wrap page">
         <Navbar push={this.props.history.push} />
-        <p>Today is: {this.props.day}</p>
-        <p>You shouldn't be in football class today but you can still choose a custom workout</p>
+        <p className="bigger-j eighty">Today is: {this.props.day}</p>
+        <p className="bigger-j eighty">You shouldn't be in football class today but you can still choose a custom workout</p>
       </div>
     )
   }
