@@ -150,6 +150,7 @@ body {
   border: 2px solid #9030CE;
   font-weight: 500;
   padding: 6px;
+  font-size: 16px;
 }
 
 .fill-btn:active {
@@ -166,6 +167,7 @@ body {
   border: 2px solid #9030CE;
   font-weight: 500;
   padding: 6px;
+  font-size: 16px;
 }
 
 .empty-btn:active {
