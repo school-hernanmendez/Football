@@ -16,7 +16,7 @@ class Quarter extends Component {
     var workoutDay = true;
     switch (this.props.day) {
       case 'Friday':
-        workoutDay = false;
+        workoutDay = true;
         break
       case 'Saturday':
         workoutDay = false;
