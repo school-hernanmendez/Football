@@ -47,11 +47,11 @@ class Quarter extends Component {
         <Navbar push={this.props.history.push} />
         <div>
         <p className="bigger-j eighty">Today is: {this.props.day}</p>
-        <hr />
+        <br />
         <p className="bigger-j eighty">You shouldn't be in football class today, but you can still choose a custom workout</p>
-        <hr /><hr />
-        <button className="fill-btn eighty">Custom Workout</button>
+        <br /><br />
         </div>
+        <button className="fill-btn eighty">Custom Workout</button>
       </div>
     )
   }
