@@ -46,7 +46,7 @@ class Measures extends Component {
   render() {
     return (
       <div className="wrap page withnav">
-        <Navbar push={this.props.history.push} type="measurements" />
+        <Navbar history={this.props.history} type="measurements" />
         <div className="height">
           <p>Height</p>
           <div>

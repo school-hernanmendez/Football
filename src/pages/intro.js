@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { API_URL } from '../var'
 
@@ -32,7 +31,10 @@ class Intro extends Component {
           <input className="input main" onChange={e => this.change(e.target.value)} value={this.state.username}/>
           <p>{this.props.message}</p>
           <button className="full-btn fill-btn" onClick={this.login}>Log in</button>
-          <Link to="/signup"><button className="full-btn empty-btn">Sign up</button></Link>
+          <button className="full-btn empty-btn" onClick={() => {
+            this.props.resetMessage()
+            this.props.history.push('/signup')
+          }}>Sign up</button>
         </div>
       </div>
     )
@@ -65,4 +67,10 @@ function login(username, push) {
   }
 }
 
-export default connect(state => state, { login })(Intro)
+function resetMessage() {
+  return dispatch => {
+    dispatch({ type: 'fail', payload: '' })
+  }
+}
+
+export default connect(state => state, { login, resetMessage })(Intro)

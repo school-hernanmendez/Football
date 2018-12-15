@@ -4,7 +4,7 @@ const app = express()
 const bodyParser = require('body-parser')
 const User = require('./mongoose.js')
 const workouts = require('./workouts.js')
-console.log(workouts)
+
 app.use(bodyParser.json());
 
 const port = process.env.PORT || 8080;

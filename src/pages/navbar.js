@@ -7,6 +7,7 @@ class Navbar extends Component {
       return (
       <div className="navbar-wrapper">
         <div className="navbar f-c">
+          <i className="material-icons back" onClick={() => this.props.history.goBack()}>chevron_left</i>
           <span className="text" style={{ fontSize: '20px'}}>Measurements</span>
         </div>
       </div>
@@ -15,9 +16,10 @@ class Navbar extends Component {
     return (
       <div className="navbar-wrapper">
         <div className="navbar">
+        <i className="material-icons back" onClick={() => this.props.history.goBack()}>chevron_left</i>
         <span className="text">Hi {this.props.firstname}</span>
         <button className="measures" onClick={() => {
-          this.props.push('/measurements')
+          this.props.history.push('/measurements')
         }}>Measurements</button>
         </div>
       </div>

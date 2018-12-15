@@ -11,6 +11,8 @@ import Signup from './pages/signup'
 import SelectQ from './pages/selectQ'
 import Workout from './pages/exercise'
 import Measures from './pages/measurements'
+import Custom from './pages/custom'
+import CustomQ from './pages/customQ'
 
 const initialState = {
   _id: '',
@@ -44,6 +46,9 @@ function reducer(state = initialState, action) {
     case 'qt':
       newState.quarter = action.payload
       return newState
+    case 'custom-day':
+      newState.cDay = action.payload
+      return newState
     default:
       return state;
   }
@@ -61,6 +66,8 @@ class App extends Component {
             <Route path="/selectQ" component={SelectQ} />
             <Route path="/workouts" component={Workout} />
             <Route path="/measurements" component={Measures} />
+            <Route path="/custom" component={Custom} />
+            <Route path="/customQ" component={CustomQ} />
             <Route path="/" component={Intro} />
           </Switch>
         </BrowserRouter>

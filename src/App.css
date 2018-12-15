@@ -65,6 +65,7 @@ body {
 .navbar > .text {
   color: white;
   font-size: 18px;
+  flex: 1;
 }
 
 .page {
@@ -122,7 +123,7 @@ body {
   border: 0;
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 4vh;
+  margin-bottom: 15px;
   color: #9030CE;
   background-color: white;
   border-radius: 0;
@@ -135,6 +136,10 @@ body {
 
 .quarter:active {
   background-color: rgb(168, 96, 216);
+}
+
+.fill-btn.custom {
+  margin-bottom: 25px;
 }
 
 .full-btn {
@@ -199,7 +204,10 @@ body {
   width: 80vw;
   display: flex;
   flex-direction: row;
-  margin-bottom: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+  min-height: 20px;
+  font-size: 16px;
 }
 
 span.workout {
@@ -208,6 +216,7 @@ span.workout {
 
 .input.workout {
   width: 50px;
+  font-size: 16px;
 }
 
 .done {
@@ -215,6 +224,7 @@ span.workout {
   box-shadow: 0 -1px 5px 0 rgba(0,0,0,.4);
   width: 100vw;
   height: 40px;
+  min-height: 40px;
   color: #9030CE;
   box-sizing: border-box;
   background-color: white;
@@ -226,10 +236,8 @@ span.workout {
 
 .workouts {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   font-size: 16px;
+  overflow-y: scroll;
 }
 
 .height {
@@ -273,4 +281,94 @@ span.workout {
 
 .weight > input {
   width: 100%;
+}
+
+.back {
+  color: white;
+  font-size: 24px;
+}
+
+.quarter-wrap.day {
+  padding-bottom: 10vh;
+}
+
+.subtitle.day {
+  font-weight: 500;
+}
+
+.exercise {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.timer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 24px;
+}
+
+.bar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 4px;
+  max-width: 0%;
+  transition: max-width .3s;
+}
+
+.bar.big {
+  transition: max-width 1s;
+  max-width: 100%;
+}
+
+.time {
+  flex: 1;
+  font-size: 21px;
+  text-align: center;
+  transition: flex .3s;
+}
+
+.time.small {
+  transition: flex 1s;
+  flex: 0;
+  padding-right: 8px;
+}
+
+.bar > div {
+  width: 100%;
+  margin: 0;
+}
+
+div.blue {
+  border: 0px solid rgb(58, 58, 255);
+  border-top-width: 4px;
+  z-index: 1;
+}
+
+div.dark {
+  border: 0px solid #333;
+  border-top-width: 4px;
+  margin-top: -4px;
+}
+
+.x1 {
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  margin: 0;
+  transition: width .3s, opacity .3s;
+  opacity: 1;
+  z-index: 1;
+}
+
+.x0 {
+  width: 0;
+  opacity: 0;
+  font-size: 1px;
+  z-index: 0;
+}
+
+.xr {
+  color: #666;
 }
