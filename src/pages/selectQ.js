@@ -27,7 +27,7 @@ class Quarter extends Component {
       default:
         break
     }
-    if (workoutDay) {
+    if (true) {
       return (
         <div className="wrap page withnav">
           <Navbar history={this.props.history} />
