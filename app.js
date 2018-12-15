@@ -4,11 +4,19 @@ const app = express()
 const bodyParser = require('body-parser')
 const User = require('./mongoose.js')
 const workouts = require('./workouts.js')
-
-app.use(bodyParser.json());
+const compression = require('compression');
 
 const port = process.env.PORT || 8080;
 
+const forceSsl = (req, res, next) => {
+  if (req.headers['x-forwarded-proto'] !== 'https' && port != 3000) {
+    return res.redirect(['https://', req.get('Host'), req.url].join(''));
+  }
+  return next();
+};
+
+app.use(forceSsl);
+app.use(compression());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('build'));
 app.use(cors())

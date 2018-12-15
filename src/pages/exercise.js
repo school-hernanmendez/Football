@@ -163,7 +163,6 @@ class Workout extends Component {
   }
   render() {
     const done = Object.keys(this.workout).filter(i => !this.workout[i].done).length === 0
-    console.log(done, this.workout, this.props.quarter)
     return (
       <div className="withnav">
         <Navbar history={this.props.history} />
