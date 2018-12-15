@@ -221,7 +221,7 @@ span.workout {
 
 .done {
   bottom: 0;
-  box-shadow: 0 -1px 5px 0 rgba(0,0,0,.4);
+  box-shadow: 0 0px 4px 0 rgba(0,0,0,.3);
   width: 100vw;
   height: 40px;
   min-height: 40px;
@@ -237,7 +237,7 @@ span.workout {
 .workouts {
   flex: 1;
   font-size: 16px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .height {
@@ -299,6 +299,8 @@ span.workout {
 .exercise {
   width: 80vw;
   margin: 0 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .timer {
@@ -306,6 +308,7 @@ span.workout {
   flex-direction: row;
   align-items: center;
   font-size: 24px;
+  margin-bottom: 25px;
 }
 
 .bar {
@@ -371,4 +374,52 @@ div.dark {
 
 .xr {
   color: #666;
+}
+
+.next-w {
+  color: #9030CE;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 0;
+  border: 2px solid #9030CE;
+  font-weight: 500;
+  padding: 6px;
+  font-size: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.halt {
+  color: rgb(164, 164, 164);
+  border: 2px solid rgb(164, 164, 164);
+}
+
+.next-w > span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.workout-r {
+  width: 96%;
+  margin: 0 auto;
+  padding: 6px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 3px 0px rgba(0,0,0, 0.1);
+  min-height: 45px;
+}
+
+.workout-r > p {
+  margin-top: 0;
+}
+
+.workout-r.red {
+  border-top: 4px solid #ff1a1a;
+}
+
+.workout-r.green {
+  border-top: 4px solid #30de3b;
 }

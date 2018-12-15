@@ -44,7 +44,7 @@ function reducer(state = initialState, action) {
       newState.message = action.payload
       return newState
     case 'qt':
-      newState.quarter = action.payload
+      newState.quarter = action.payload -1
       return newState
     case 'custom-day':
       newState.cDay = action.payload
@@ -68,6 +68,7 @@ class App extends Component {
             <Route path="/measurements" component={Measures} />
             <Route path="/custom" component={Custom} />
             <Route path="/customQ" component={CustomQ} />
+            <Route path="/cWorkout" component={props => <Workout {...props} custom />} />
             <Route path="/" component={Intro} />
           </Switch>
         </BrowserRouter>
