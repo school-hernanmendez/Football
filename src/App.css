@@ -4,7 +4,8 @@ body {
   background-color: white;
   font-family: 'Open Sans', sans-serif;
   font-size: 17px;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .eighty {
@@ -24,7 +25,7 @@ body {
   width: 100vw;
   background-color: #9030CE;
   box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 10;
 }
@@ -422,4 +423,255 @@ div.dark {
 
 .workout-r.green {
   border-top: 4px solid #30de3b;
+}
+
+.Roster-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.Roster-login > form {
+  padding: 50px;
+  background-color: #9030CE;
+  color: white;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,.3);
+}
+
+.Roster-login > form > p {
+  margin: 0;
+  font-size: 28px;
+}
+
+.Roster-login > form > .input {
+  border-width: 0;
+  background-color: rgba(0,0,0,0);
+  border-bottom: 2px solid white;
+  font-size: 24px;
+  display: block;
+  margin-top: 24px;
+}
+
+form > .input:focus {
+  outline-width: 0;
+  border-color: white;
+}
+
+.submit {
+  width: 200px;
+  margin-top: 24px;
+  border-color: white;
+  font-size: 22px;
+  padding: 4px;
+}
+
+.navbar-roster {
+  height: 50px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 4vw;
+  color: white;
+  font-size: 24px;
+}
+
+.navbar-roster > i {
+  position: relative;
+  font-size: 30px;
+  top: -1px;
+}
+
+.navbar-roster > img {
+  position: absolute;
+  right: 1vw;
+  top: 2px;
+  height: 45px;
+  border-radius: 15px;
+}
+
+.roster {
+  padding-top: 60px;
+  
+}
+
+.div {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.div > p {
+  font-weight: bold;
+  font-size: 40px;
+  color: #333;
+  margin: 0;
+}
+
+.students {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.students > div {
+  width: 50%;
+  font-size: 20px;
+  padding-right: 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.students > div > p {
+  margin: 0;
+}
+
+.students > div > p > p {
+  margin: 0;
+  margin-bottom: -10px;
+}
+
+.roster-measurements {
+  font-size: 17px;
+  color: #999;
+}
+
+.usrname {
+  font-size: 14px;
+  color: #999;
+}
+
+@media (max-width: 800px) {
+  .students > div {
+    width: 100%;
+  }
+}
+
+.Roster-student {
+  padding-top: 60px;
+}
+
+.div-s {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.div-s > p.info {
+  font-weight: bold;
+  font-size: 40px;
+  color: #333;
+  margin: 0;
+}
+
+.big-usrname {
+  font-size: 26px;
+  font-weight: 100;
+  color: #999;
+}
+
+.roster-measurements-s {
+  font-size: 24px;
+  font-weight: 100;
+  color: #333;
+  margin: 0;
+}
+
+.roster-measurements-s > span {
+  color: #777;
+}
+
+.r-workouts {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.r-workouts > div {
+  flex: 1;
+  min-width: 400px;
+  max-width: 700px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 0 6px 0px rgba(0,0,0, 0.2);
+}
+
+.r-workouts > div > span {
+  color: #555;
+  float: right;
+}
+
+.div-s > .text {
+  font-size: 20px;
+}
+
+.delete-s {
+  margin-top: 30px;
+  width: 100%;
+  font-size: 20px;
+  color: white;
+  padding: 7px;
+  max-width: 600px;
+  text-align: center;
+  background-color: #ef4b4b;
+  box-shadow: 0 0 6px 0px rgba(0,0,0, 0.2);
+  margin-bottom: 50px;
+}
+
+.delete-s > .sure {
+  float: right;
+  position: relative;
+  background-color: white;
+  color: #ef4b4b;
+  top: -7px;
+  display: flex;
+  flex-direction: row;
+  padding: 0 25px;
+  height: 42px;
+  right: -8px;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
+  transition: max-width 1.2s cubic-bezier(.43,.82,.33,.99), opacity .6s linear .2s;
+}
+
+.sure.hidden {
+  transition: max-width 1.2s cubic-bezier(.43,.82,.33,.99), opacity .3s;
+  max-width: 0;
+  opacity: 0;
+}
+
+.delete-s > .sure > button.left {
+  position: relative;
+  font-size: 18px;
+  padding: 3px 8px;
+  margin-left: 10px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: 2px solid #ef4b4b;
+  border-right-width: 0px;
+  background-color: white;
+  color: #ef4b4b;
+}
+
+.delete-s > .sure > button.right {
+  position: relative;
+  font-size: 18px;
+  padding: 3px 8px;
+  border: 2px solid #ef4b4b;
+  background-color: white;
+  color: #ef4b4b;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.delete-s > .sure > button.right:focus {
+  outline-width: 0;
+}
+.delete-s > .sure > button.left:focus {
+  outline-width: 0;
 }

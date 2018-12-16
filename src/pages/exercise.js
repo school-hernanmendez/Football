@@ -96,14 +96,14 @@ class Workout extends Component {
     super(props)
     this.workouts = {
       Monday: [
-        ['power_clean', 'partner_neck', 'spot_neck', 'wt_crunch'],
+        ['power_clean', 'partner_neck', 'spot_neck', 'wT_crunch'],
         ['press_variations', 'spot', 'pizza_pies'],
         ['squat', 'plate_good_mornings', 'jump_rope', 'sabers'],
         ['team_finishers']
       ],
       Tuesday: [
         ['clean_&_jerk', 'pull_up', 'spot', 'dead_bugs'],
-        ['bench', 'spot', 'db_rows', 'walking_lunge'],
+        ['bench', 'spot', 'dB_rows', 'walking_lunge'],
         ['squat_variation', 'straight_leg_deadlift', 'calves_raises', 'chopping_wood'],
         ['team_finishers']
       ],
@@ -115,7 +115,7 @@ class Workout extends Component {
       ],
       Thursday: [
         ['snatch', 'pull_up', 'spot', 'plank_raises'],
-        ['bench', 'spot', 'db_rows', 'overhead_walking_lunge'],
+        ['bench', 'spot', 'dB_rows', 'overhead_walking_lunge'],
         ['squat_variation', 'romanian_deadlift', 'calves_raises', 'chopping_wood'],
         ['team_finishers']
       ],
@@ -180,11 +180,11 @@ class Workout extends Component {
                   {this.props.workouts[i].type === 'lbs' && (
                     <div>
                       <span>Sets: 3 - Reps: 5</span><br/>
-                      <span>Recommended Weight: {
+                      {this.props.workouts[i].num ? <span>Recommended Weight: {
                         (Math.round(this.props.workouts[i].num * .8) % 5) === 0 ? 
                          Math.round(this.props.workouts[i].num * .8) :
                          Math.floor(Math.round(this.props.workouts[i].num * .8) / 5) * 5
-                      }</span>
+                      }</span> : ''}
                     </div>
                   )
                   }

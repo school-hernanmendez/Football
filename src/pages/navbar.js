@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
 class Navbar extends Component {
+  componentDidMount() {
+    window.addEventListener('resize', () => {
+      this.forceUpdate()
+    })
+  }
   render() {
     if(this.props.type === "measurements") {
       return (
@@ -12,6 +17,17 @@ class Navbar extends Component {
         </div>
       </div>
       )
+    } else if(this.props.type === "roster") {
+      const width = window.innerWidth
+      const w = width - 64 - (width/3.4)
+      return (
+        <div className="navbar-wrapper">
+          <div className="navbar-roster" style={{ background: `linear-gradient(45deg, #9030CE ${w}px, white ${w}px)` }}>
+            <i onClick={() => this.props.back()} className={`material-icons x1 ${this.props.status === 'student' ? '' : 'x0'}`}>chevron_left</i><p>CHS Football Team</p>
+            <img src="/logo.svg" alt="logo"/>
+          </div>
+        </div>
+        )
     }
     return (
       <div className="navbar-wrapper">

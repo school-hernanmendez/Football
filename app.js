@@ -9,7 +9,7 @@ const compression = require('compression');
 const port = process.env.PORT || 8080;
 
 const forceSsl = (req, res, next) => {
-  if (req.headers['x-forwarded-proto'] !== 'https' && port != 3000) {
+  if (req.headers['x-forwarded-proto'] !== 'https' && port !== 8080) {
     return res.redirect(['https://', req.get('Host'), req.url].join(''));
   }
   return next();
@@ -18,8 +18,9 @@ const forceSsl = (req, res, next) => {
 app.use(forceSsl);
 app.use(compression());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.static('build'));
-app.use(cors())
+app.use(cors());
 
 app.use((req, res, next) => {
   res.error = (errMessage, status = 500) => res.status(status).send(errMessage)
@@ -60,6 +61,8 @@ app.get('*', (req, res, next) => {
     next();
   } else if(req.url === '/') {
     res.sendFile(`${__dirname}/build/index.html`);
+  } else if(req.url === '/roster') {
+    res.sendFile(`${__dirname}/build/index.html`);
   } else {
     res.redirect('/')
   }
@@ -98,8 +101,23 @@ app.get('/api/signup/:username/:firstname/:lastname', (req, res) => {
     }).catch(res.catchError('mongo error'))
   });
 
+app.get('/api/all', (req, res) => {
+  User.find({}).lean()
+    .then(arr => res.json(arr))
+    .catch(res.catchError('mongo error'))
+});
+
 app.get('/logo.svg', (req, res) => {
   res.sendFile(`${__dirname}/build/logo.svg`);
+});
+
+app.get('/api/delete/:id', (req,res) => {
+  User.findByIdAndDelete(req.params.id).exec()
+    .then(() => {
+      User.find({}).lean()
+      .then(arr => res.json(arr))
+      .catch(res.catchError('mongo error'))
+    }).catch(res.catchError('mongo error'))
 });
 
 app.post('/api/change/:id', (req, res) => {

@@ -1,6 +1,6 @@
 var exercises = [
     ['power_clean', 'lbs'],
-    ['wt_crunch', 'n'],
+    ['wT_crunch', 'no'],
     ['press_variations', 'no'],
     ['partner_hip', 'no'],
     ['snatch', 'lbs'],
@@ -18,7 +18,7 @@ var exercises = [
     ['pull_up', 'n'],
     ['dead_bugs', 'no'],
     ['bench', 'lbs'],
-    ['db_rows', 'lbs'],
+    ['dB_rows', 'lbs'],
     ['plank_raises', 'no'],
     ['overhead_walking_lunge', 'no'],
     ['walking_lunge', 'no'],

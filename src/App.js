@@ -13,6 +13,7 @@ import Workout from './pages/exercise'
 import Measures from './pages/measurements'
 import Custom from './pages/custom'
 import CustomQ from './pages/customQ'
+import Roster from './pages/roster'
 
 const initialState = {
   _id: '',
@@ -69,6 +70,7 @@ class App extends Component {
             <Route path="/custom" component={Custom} />
             <Route path="/customQ" component={CustomQ} />
             <Route path="/cWorkout" component={props => <Workout {...props} custom />} />
+            <Route path="/roster" component={Roster} />
             <Route path="/" component={Intro} />
           </Switch>
         </BrowserRouter>
